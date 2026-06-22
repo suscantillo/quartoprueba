@@ -1,0 +1,58 @@
+// =============================================================================
+//  styles.scss  —  Ajustes de estética (MODO CLARO)
+// -----------------------------------------------------------------------------
+//  Aquí se cambian colores y tipografía SIN tocar nada de programación.
+//  Un archivo de tema de Quarto tiene DOS zonas, marcadas con los comentarios
+//  especiales "scss:defaults" y "scss:rules" que verás más abajo y que NO debes
+//  borrar:
+//
+//    zona "scss:defaults"  ->  VARIABLES (colores, fuentes). Cambia los valores.
+//    zona "scss:rules"     ->  Reglas finas de estilo (opcional, avanzado).
+//
+//  Cambia un color y guarda: si tienes "quarto preview" abierto, el sitio se
+//  actualiza solo en el navegador.
+// =============================================================================
+
+/*-- scss:defaults --*/
+
+// === COLOR PRINCIPAL ========================================================
+// Es el color de la barra de navegación, los enlaces y los acentos.
+// Escribe cualquier color web (p. ej. "#2c3e50", "darkred", "#1a5276").
+$primary:   #1a5276 !default;   // Azul académico sobrio.
+
+// Color de los enlaces dentro del texto.
+$link-color: $primary !default;
+
+// === TIPOGRAFÍA =============================================================
+// Fuente del cuerpo de texto y de los títulos. Puedes poner cualquier nombre
+// de fuente del sistema; estas son seguras y se ven bien en pantalla.
+$font-family-sans-serif: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif !default;
+$headings-font-family:   "Source Sans Pro", Georgia, serif !default;
+
+// Tamaño base del texto (1rem ≈ 16px). Súbelo a 1.05rem si lo quieres mayor.
+$font-size-base: 1rem !default;
+
+// Ancho máximo de la columna de lectura (líneas más cortas = más legible).
+$content-padding-top: 1rem !default;
+
+
+/*-- scss:rules --*/
+
+// Pequeños retoques. Edita o borra a gusto; nada de esto es imprescindible.
+
+// Un poco más de aire entre líneas para textos largos / matemáticas.
+body {
+  line-height: 1.65;
+}
+
+// Que los títulos respiren.
+h1, h2, h3 {
+  margin-top: 1.4em;
+  font-weight: 600;
+}
+
+// Las imágenes nunca se salen de la columna.
+img {
+  max-width: 100%;
+  height: auto;
+}

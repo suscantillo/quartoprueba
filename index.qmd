@@ -1,0 +1,54 @@
+---
+title: "Prof. [REEMPLAZAR Nombre Apellido]"
+subtitle: "[REEMPLAZAR Área de investigación, p. ej. Análisis Funcional]"
+# Esta página usa el formato "about" de Quarto, pensado justo para perfiles
+# académicos. El "template: trestles" pone la foto a un lado y el texto al otro.
+# Otras plantillas que puedes probar: jolla, solana, marquee, broadside.
+about:
+  template: trestles
+  image: images/perfil.svg          # <-- Reemplaza por tu foto (jpg/png) en images/.
+  image-shape: round
+  links:
+    - icon: envelope
+      text: Correo
+      href: "mailto:[REEMPLAZAR correo@universidad.edu]"
+    - icon: mortarboard-fill
+      text: Google Scholar
+      href: "https://scholar.google.com/citations?user=[REEMPLAZAR-ID]"
+    - icon: person-badge
+      text: ORCID
+      href: "https://orcid.org/[REEMPLAZAR-0000-0000-0000-0000]"
+    - icon: file-earmark-text
+      text: arXiv
+      href: "https://arxiv.org/a/[REEMPLAZAR-apellido_i_1]"
+    - icon: calculator
+      text: MathSciNet
+      href: "https://mathscinet.ams.org/mathscinet/author?authorId=[REEMPLAZAR-ID]"
+---
+
+## Sobre mí
+
+[REEMPLAZAR] Soy profesor/a de matemáticas en la **[Universidad/Instituto]**,
+en el departamento de **[Departamento]**. Mi investigación se centra en
+**[tema de investigación]**, con especial interés en [subtemas concretos].
+
+Antes de incorporarme a [universidad actual] obtuve mi doctorado en
+**[Universidad]** ([año]) bajo la dirección de **[director/a]**, y realicé
+estancias posdoctorales en **[instituciones]**.
+
+## Líneas de investigación
+
+- [REEMPLAZAR] Línea 1 — p. ej. *Operadores en espacios de Hilbert*.
+- [REEMPLAZAR] Línea 2 — p. ej. *Teoría espectral*.
+- [REEMPLAZAR] Línea 3 — p. ej. *Ecuaciones en derivadas parciales*.
+
+## Docencia (curso actual)
+
+- [REEMPLAZAR] **[Asignatura]** — [grado/máster], [semestre].
+- [REEMPLAZAR] **[Asignatura]** — [grado/máster], [semestre].
+
+::: {.callout-note}
+Esta es la página de inicio. Para ver mis trabajos, visita
+[Publicaciones](publicaciones.qmd); para notas y divulgación, el
+[Blog](blog.qmd); y mi currículum completo está en [CV](cv.qmd).
+:::

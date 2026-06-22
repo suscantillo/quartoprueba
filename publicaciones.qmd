@@ -1,0 +1,40 @@
+---
+title: "Publicaciones"
+# Esta página construye la lista de publicaciones AUTOMÁTICAMENTE a partir del
+# archivo referencias.bib. La clave es "nocite": le dice a Quarto "incluye estas
+# referencias en la bibliografía aunque no las cite explícitamente en el texto".
+#   @*  =  TODAS las entradas del .bib.
+# Si prefieres listar solo algunas, escribe sus claves: "@wiles1995 @rudin1976".
+nocite: |
+  @*
+toc: false
+---
+
+A continuación, mis publicaciones y libros de referencia. Esta lista se genera
+sola desde el archivo `referencias.bib`: **para añadir una publicación nueva no
+hay que tocar esta página**, basta con agregar su entrada al `.bib` (ver el
+README). Los identificadores DOI aparecen como enlaces automáticamente.
+
+::: {.callout-tip collapse="true"}
+## ¿Cómo añadir enlaces a PDF / arXiv junto a cada entrada?
+
+La lista de abajo (vía `nocite`) muestra la cita formateada con su DOI. Si
+además quieres botones explícitos de **PDF**, **arXiv** o **código**, puedes
+mantener a mano una sección como esta:
+
+> **Green, B. y Tao, T.** (2008). *The primes contain arbitrarily long
+> arithmetic progressions.* Annals of Mathematics, 167(2), 481–547.
+> [[DOI]](https://doi.org/10.4007/annals.2008.167.481) ·
+> [[arXiv]](https://arxiv.org/abs/math/0404188) ·
+> [[PDF]](files/cv.pdf)
+
+Es decir, texto normal en Markdown con enlaces `[texto](URL)`. Usa el método
+que te resulte más cómodo; muchos matemáticos combinan los dos.
+:::
+
+---
+
+## Lista de publicaciones {#publicaciones}
+
+::: {#refs}
+:::

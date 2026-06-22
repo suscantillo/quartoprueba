@@ -1,0 +1,76 @@
+---
+title: "Citas, referencias y un poco de código"
+description: "Cómo citar artículos y libros desde el .bib, con la bibliografía al final, y cómo incluir código resaltado."
+author: "Prof. [REEMPLAZAR Nombre]"
+date: 2026-03-05
+categories: [álgebra, teoría de números, herramientas]
+---
+
+En esta entrada muestro cómo **citar** trabajos desde el archivo
+`referencias.bib`. Citar es tan sencillo como escribir `@clave`, donde `clave`
+es el identificador de la entrada en el `.bib`. Al final de la página aparece
+sola la lista de **referencias** con solo lo que se haya citado.
+
+## Citando en el texto
+
+Para los fundamentos del análisis real sigo el clásico de @rudin1976, mientras
+que en álgebra conmutativa la referencia obligada es @atiyah1969. Las citas
+también pueden ir entre paréntesis: el teorema de progresiones aritméticas en
+los primos es un hito reciente [@greentao2008], y la demostración del último
+teorema de Fermat por Wiles [@wiles1995] cerró un problema abierto durante más
+de tres siglos.
+
+Se pueden citar varios trabajos a la vez [@rudin1976; @atiyah1969] e incluso
+añadir páginas o notas: [@wiles1995, pp. 443--451].
+
+::: {.callout-note}
+Como la bibliografía está configurada de forma global en `_quarto.yml`, **no
+hay que hacer nada especial** en cada post: basta con citar con `@clave` y la
+lista de referencias se genera automáticamente al final.
+:::
+
+## Un cálculo simbólico de ejemplo
+
+A menudo conviene acompañar una idea con un cálculo. Los bloques de código se
+escriben entre triples acentos graves indicando el lenguaje, y se obtiene
+**resaltado de sintaxis** y un botón de copiar. Por ejemplo, este fragmento de
+[SymPy](https://www.sympy.org) (Python) verifica el valor de la suma de Basilea
+$\sum_{n\ge 1} n^{-2} = \pi^2/6$ (resuelta por Euler) que vimos en la entrada
+anterior:
+
+```python
+import sympy as sp
+
+n = sp.symbols("n", positive=True, integer=True)
+
+# Suma simbólica exacta de la serie de Basilea
+serie = sp.summation(1 / n**2, (n, 1, sp.oo))
+print(serie)              # -> pi**2/6
+
+# Comprobación numérica de la suma parcial
+parcial = sum(1 / k**2 for k in range(1, 100_000))
+print(float(parcial), float(sp.pi**2 / 6))
+```
+
+Y lo mismo en **SageMath**, que entiende directamente la notación matemática:
+
+```python
+# SageMath
+var('n')
+print(sum(1/n^2, n, 1, oo))   # pi^2/6
+```
+
+El bloque de arriba es solo **ilustrativo**: aparece resaltado pero no se
+ejecuta al generar el sitio, así que el sitio compila sin necesidad de tener
+Python instalado. (Quarto también puede *ejecutar* el código y mostrar su
+resultado, pero eso queda para más adelante si a Omar le interesa.)
+
+## Referencias
+
+::: {.callout-tip appearance="simple"}
+Las referencias de abajo se generan automáticamente a partir de las citas de
+esta página. El estilo de las citas se fija en `_quarto.yml`.
+:::
+
+::: {#refs}
+:::

@@ -1,0 +1,164 @@
+---
+title: "Demostración de un teorema: la irracionalidad de $\\sqrt{2}$"
+description: "Un recorrido por teoremas, lemas, ecuaciones numeradas y todo el aparato LaTeX que usa un matemático."
+author: "Prof. [REEMPLAZAR Nombre]"
+date: 2026-02-10
+categories: [análisis, teoría de números, demostraciones]
+---
+
+Esta entrada es una **muestra de lo que se puede escribir** con todo el aparato
+matemático: entornos de teorema y demostración, ecuaciones numeradas con
+referencias cruzadas, matrices, sumatorios, integrales, productos tensoriales y
+toda la notación habitual (conjuntos, lógica, $\mathcal{caligráficas}$,
+$\mathbb{pizarra}$ y $\mathfrak{fraktur}$).
+
+## Notación
+
+Recordemos la notación básica. Trabajamos con los conjuntos de números
+naturales $\NN$, enteros $\ZZ$, racionales $\QQ$, reales $\RR$ y complejos $\CC$
+(estos cinco son **macros propias** definidas en `_quarto.yml`: escribir `\RR`
+produce $\RR$).
+
+Usamos cuantificadores y conectivas lógicas sin reparo:
+$$
+\forall \varepsilon > 0 \;\; \exists\, \delta > 0 : \;
+\abs{x - a} < \delta \implies \abs{f(x) - f(a)} < \varepsilon .
+$$
+
+Las familias de conjuntos van en letra caligráfica, $\mathcal{F} \subseteq
+\mathcal{P}(X)$; un álgebra de operadores en fraktur, $\mathfrak{A}$, con su
+centro $\mathfrak{Z}(\mathfrak{A})$; y las operaciones de conjuntos son las de
+siempre:
+$$
+A \cup B,\quad A \cap B,\quad A \setminus B,\quad A \subseteq B,\quad
+A \in \mathcal{F},\quad \bigcup_{n \in \NN} A_n .
+$$
+
+## El teorema y su demostración
+
+Pasemos al resultado clásico. Lo enunciamos como teorema usando los **entornos
+nativos de Quarto** (que se numeran y se pueden referenciar solos), y damos
+primero un lema auxiliar.
+
+::: {#lem-par}
+## Un cuadrado par tiene base par
+
+Sea $p \in \ZZ$. Si $p^{2}$ es par, entonces $p$ es par.
+:::
+
+::: {.proof}
+Razonamos por contrarrecíproco. Si $p$ es impar, entonces $p = 2k+1$ para
+algún $k \in \ZZ$, y por tanto
+$$
+p^{2} = (2k+1)^{2} = 4k^{2} + 4k + 1 = 2\,(2k^{2} + 2k) + 1 ,
+$$
+que es impar. Luego, si $p^{2}$ es par, $p$ no puede ser impar; es decir, $p$
+es par. $\blacksquare$
+:::
+
+Con el [Lema @lem-par] a mano, demostramos el teorema central.
+
+::: {#thm-sqrt2}
+## Irracionalidad de $\sqrt{2}$ (Pitágoras / Euclides)
+
+El número $\sqrt{2}$ es irracional; esto es, $\sqrt{2} \notin \QQ$.
+:::
+
+::: {.proof}
+Supongamos, **por reducción al absurdo**, que $\sqrt{2} \in \QQ$. Entonces
+existen enteros $p, q$ con $q \neq 0$ tales que
+$$
+\sqrt{2} = \frac{p}{q},
+\qquad \text{con } \gcd(p, q) = 1,
+$$ {#eq-fraccion}
+donde podemos suponer la fracción **irreducible** (si no lo fuera, la
+simplificaríamos). Elevando al cuadrado la igualdad @eq-fraccion y despejando,
+obtenemos
+$$
+p^{2} = 2\,q^{2}.
+$$ {#eq-cuadrado}
+
+La identidad @eq-cuadrado dice que $p^{2}$ es par; por el [Lema @lem-par],
+$p$ también lo es, digamos $p = 2k$ con $k \in \ZZ$. Sustituyendo en
+@eq-cuadrado,
+$$
+(2k)^{2} = 2\,q^{2}
+\;\Longrightarrow\;
+4k^{2} = 2\,q^{2}
+\;\Longrightarrow\;
+q^{2} = 2k^{2}.
+$$
+
+Pero esto dice que $q^{2}$ es par y, de nuevo por el [Lema @lem-par], $q$ es
+par. Hemos concluido que **tanto $p$ como $q$ son pares**, lo que contradice
+que $\gcd(p, q) = 1$ en @eq-fraccion. La contradicción provino de suponer
+$\sqrt{2} \in \QQ$; por tanto $\sqrt{2} \notin \QQ$. $\blacksquare$
+:::
+
+## Ecuaciones numeradas y referencias cruzadas
+
+Hay **dos formas** de numerar y referenciar ecuaciones; ambas funcionan en
+este sitio. Úsala la que te resulte más natural.
+
+**Forma 1 — al estilo Quarto.** Se etiqueta la ecuación con `{#eq-...}` y se
+cita con `@eq-...`. La ecuación de Euler,
+$$
+e^{i\pi} + 1 = 0,
+$$ {#eq-euler}
+es la @eq-euler.
+
+**Forma 2 — al estilo LaTeX puro** (vía MathJax con `tags: 'ams'`). Se usa
+`\label{...}` dentro de un entorno `equation` y se cita con `\eqref{...}`:
+\begin{equation}\label{eq:gauss}
+\sum_{k=1}^{n} k = \frac{n(n+1)}{2}.
+\end{equation}
+La fórmula de Gauss es la ecuación \eqref{eq:gauss}.
+
+## Un catálogo de entornos
+
+Para que se vea que todo el repertorio renderiza bien.
+
+**Sumatorios e integrales** en una cadena de igualdades con `align` (cada línea
+se alinea por el `=` y se numera automáticamente):
+\begin{align}
+\int_{0}^{\infty} e^{-x}\,dx
+  &= \Big[-e^{-x}\Big]_{0}^{\infty} = 1, \\
+\sum_{n=0}^{\infty} \frac{1}{n!}
+  &= e, \\
+\sum_{n=1}^{\infty} \frac{1}{n^{2}}
+  &= \frac{\pi^{2}}{6}.
+\end{align}
+
+**Definición por casos** con `cases`:
+$$
+\operatorname{sgn}(x) =
+\begin{cases}
+\phantom{-}1 & \text{si } x > 0, \\
+\phantom{-}0 & \text{si } x = 0, \\
+-1 & \text{si } x < 0.
+\end{cases}
+$$
+
+**Matrices** (`pmatrix`, `bmatrix`) y su producto:
+$$
+\begin{pmatrix} a & b \\ c & d \end{pmatrix}
+\begin{pmatrix} x \\ y \end{pmatrix}
+=
+\begin{bmatrix} ax + by \\ cx + dy \end{bmatrix}.
+$$
+
+**Producto tensorial** y normas (la macro `\norm{·}` también es nuestra):
+$$
+\norm{u \otimes v} = \norm{u}\,\norm{v},
+\qquad
+(A \otimes B)(u \otimes v) = (Au) \otimes (Bv),
+\qquad
+u, v \in \mathcal{H}.
+$$
+
+::: {.callout-tip}
+## Para Omar
+Todo lo anterior está escrito en texto plano con LaTeX entre `$...$` (en línea)
+o `$$...$$` (en bloque). En el README tienes una chuleta con estos mismos
+ejemplos listos para copiar y pegar.
+:::

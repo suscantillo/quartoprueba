@@ -1,0 +1,8 @@
+# Opciones COMUNES a todos los posts del blog. Lo que pongas aquí se aplica a
+# cada entrada dentro de "posts/" sin tener que repetirlo en cada una.
+# (Se puede sobreescribir en el front matter de un post concreto.)
+
+freeze: auto          # Acelera el renderizado: solo recalcula lo que cambió.
+
+# Muestra la fecha de última modificación al pie de cada post.
+date-modified: last-modified

@@ -1,0 +1,11 @@
+# Sitio generado por Quarto (se vuelve a crear con "quarto render").
+/_site/
+
+# Cachés internas de Quarto.
+/.quarto/
+**/*.quarto_ipynb
+*_files/
+
+# Archivos temporales del sistema.
+.DS_Store
+Thumbs.db

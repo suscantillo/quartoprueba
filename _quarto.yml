@@ -1,0 +1,137 @@
+# ============================================================================
+#  _quarto.yml  —  Configuración principal del sitio
+# ----------------------------------------------------------------------------
+#  Este es el "panel de control" de todo el sitio. Casi todo lo que quieras
+#  cambiar (título, menú, colores, tema, autor) se toca AQUÍ, sin necesidad
+#  de editar los posts uno por uno.
+#
+#  Regla de oro de YAML: la indentación (los espacios al inicio de cada línea)
+#  ES significativa. Usa SIEMPRE espacios, nunca tabulaciones, y respeta el
+#  número de espacios que ves en los ejemplos.
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# 1. TIPO DE PROYECTO
+# ----------------------------------------------------------------------------
+# "website" = sitio web estático con varias páginas y una barra de navegación.
+project:
+  type: website
+  output-dir: _site          # Carpeta donde Quarto deja el sitio ya generado.
+
+# ----------------------------------------------------------------------------
+# 2. EL SITIO WEB: título, menú de navegación y pie de página
+# ----------------------------------------------------------------------------
+website:
+  title: "Prof. [REEMPLAZAR Nombre]"   # <-- Aparece arriba a la izquierda.
+  description: "Sitio web académico — matemáticas"
+  site-url: "https://ejemplo.com"      # <-- URL final cuando se publique.
+
+  # --- Barra de navegación superior -----------------------------------------
+  # Cada "- text/href" es un botón del menú. El "href" apunta a un archivo .qmd
+  # (Quarto lo convierte a .html automáticamente). Para añadir, quitar o
+  # reordenar secciones del menú, edita esta lista.
+  navbar:
+    background: primary      # Usa el color principal del tema (ver más abajo).
+    search: true             # Muestra una caja de búsqueda.
+    left:
+      - text: "Inicio"
+        href: index.qmd
+      - text: "Publicaciones"
+        href: publicaciones.qmd
+      - text: "Blog"
+        href: blog.qmd
+      - text: "CV"
+        href: cv.qmd
+    right:
+      # Iconos de redes/perfiles a la derecha. Cambia las URL por las reales.
+      - icon: envelope
+        href: "mailto:[REEMPLAZAR correo@universidad.edu]"
+        aria-label: "Correo electrónico"
+      - icon: github
+        href: "https://github.com/[REEMPLAZAR-usuario]"
+        aria-label: "GitHub"
+
+  # --- Pie de página ---------------------------------------------------------
+  page-footer:
+    center: "© 2026 Prof. [REEMPLAZAR Nombre] — Hecho con [Quarto](https://quarto.org)."
+
+# ----------------------------------------------------------------------------
+# 3. FORMATO DE SALIDA: tema visual, matemáticas y estilos
+# ----------------------------------------------------------------------------
+format:
+  html:
+    # --- Tema de Bootstrap ---------------------------------------------------
+    # Lista de temas: https://quarto.org/docs/output-formats/html-themes.html
+    # Damos DOS temas: el primero es el modo CLARO, el segundo el modo OSCURO.
+    # Quarto añade automáticamente un interruptor sol/luna para alternarlos.
+    # Prueba a cambiar "cosmo" por "litera", "flatly", "lumen", etc.
+    theme:
+      light: [cosmo, styles.scss]   # styles.scss = nuestros ajustes propios.
+      dark:  [cosmo, styles-dark.scss]
+    toc: true                  # Tabla de contenidos (índice) a la derecha.
+    toc-title: "En esta página"
+    code-copy: true            # Botón "copiar" en los bloques de código.
+    code-overflow: wrap        # Los bloques de código largos hacen salto de línea.
+    citations-hover: true      # Muestra la cita al pasar el ratón.
+    fig-cap-location: bottom
+
+    # --- Renderizado de matemáticas: MathJax --------------------------------
+    # Usamos MathJax (no KaTeX) porque cubre mejor el repertorio de comandos
+    # LaTeX que necesita un matemático. Lo activamos y, a la vez, le pasamos
+    # nuestra configuración (numeración de ecuaciones + macros propias) en el
+    # bloque "include-in-header" de más abajo.
+    html-math-method: mathjax
+
+    # --- Configuración de MathJax: numeración + MACROS PERSONALIZADAS --------
+    # Este bloque inyecta un <script> en el <head> de cada página.
+    #   * tags: 'ams'  -> numera automáticamente las ecuaciones dentro de
+    #                     \begin{equation}, \begin{align}, etc., y habilita
+    #                     las referencias con \eqref{...}.
+    #   * macros       -> aquí defines tus PROPIOS comandos LaTeX. Un matemático
+    #                     casi siempre tiene los suyos; añadir más es tan simple
+    #                     como agregar una línea "NombreComando: '...'".
+    #
+    #     Sintaxis de una macro:
+    #         SinArgumentos:  RR: "{\\mathbb{R}}"
+    #         ConArgumentos:  abs: ["\\left|#1\\right|", 1]   (el 1 = nº de args)
+    #
+    #     OJO: dentro de las comillas, las barras de LaTeX van DOBLES (\\).
+    include-in-header:
+      - text: |
+          <script>
+          window.MathJax = {
+            tex: {
+              tags: 'ams',
+              macros: {
+                RR: "{\\mathbb{R}}",
+                ZZ: "{\\mathbb{Z}}",
+                NN: "{\\mathbb{N}}",
+                QQ: "{\\mathbb{Q}}",
+                CC: "{\\mathbb{C}}",
+                abs: ["\\left\\lvert #1 \\right\\rvert", 1],
+                norm: ["\\left\\lVert #1 \\right\\rVert", 1],
+                set: ["\\left\\{ #1 \\right\\}", 1]
+              }
+            }
+          };
+          </script>
+
+# ----------------------------------------------------------------------------
+# 4. BIBLIOGRAFÍA (citas y referencias)
+# ----------------------------------------------------------------------------
+# Archivo .bib con las referencias. Se usa tanto en la página de Publicaciones
+# como en los posts del blog que citan con @clave.
+bibliography: referencias.bib
+# Estilo de las citas (CSL). Usamos un archivo LOCAL "autor-fecha" (Chicago),
+# así el sitio se genera sin depender de internet. Para usar otro estilo (p. ej.
+# numérico tipo AMS/IEEE), descarga el .csl que quieras de
+# https://www.zotero.org/styles, guárdalo en la carpeta del proyecto y cambia
+# el nombre de abajo. Si borras esta línea, Quarto usa su estilo por defecto.
+csl: chicago-author-date.csl
+
+# ----------------------------------------------------------------------------
+# 5. AUTOR POR DEFECTO
+# ----------------------------------------------------------------------------
+# Se aplica a las páginas que no declaren su propio autor.
+author: "Prof. [REEMPLAZAR Nombre]"
+lang: es

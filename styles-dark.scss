@@ -1,0 +1,34 @@
+// =============================================================================
+//  styles-dark.scss  —  Ajustes de estética (MODO OSCURO)
+// -----------------------------------------------------------------------------
+//  Es el equivalente de styles.scss pero para cuando el visitante activa el
+//  modo oscuro (el interruptor sol/luna arriba a la derecha). Suele bastar con
+//  elegir un color principal algo más claro para que contraste sobre el fondo
+//  negro. Cambia solo lo que necesites.
+// =============================================================================
+
+/*-- scss:defaults --*/
+
+// Azul algo más luminoso para que resalte sobre fondo oscuro.
+$primary:    #5dade2 !default;
+$link-color: #85c1e9 !default;
+
+$font-family-sans-serif: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif !default;
+$headings-font-family:   "Source Sans Pro", Georgia, serif !default;
+
+
+/*-- scss:rules --*/
+
+body {
+  line-height: 1.65;
+}
+
+h1, h2, h3 {
+  margin-top: 1.4em;
+  font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

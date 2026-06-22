@@ -1,0 +1,41 @@
+---
+title: "Currículum Vitae"
+toc: false
+---
+
+Puedes descargar mi CV completo en PDF aquí:
+
+::: {.callout-note appearance="simple"}
+### 📄 [Descargar CV (PDF)](files/cv.pdf){target="_blank"}
+
+*Última actualización: [REEMPLAZAR mes/año].*
+:::
+
+Para actualizarlo, simplemente reemplaza el archivo `files/cv.pdf` por tu
+versión nueva (mismo nombre) y vuelve a generar el sitio. El enlace seguirá
+funcionando sin cambiar nada más.
+
+---
+
+## Resumen
+
+A continuación, una versión breve en la propia web (opcional). Puedes
+mantenerla o borrar esta sección y dejar solo el PDF.
+
+### Formación
+
+- **Doctorado en Matemáticas** — [REEMPLAZAR Universidad], [año].
+- **Máster / Licenciatura en Matemáticas** — [REEMPLAZAR Universidad], [año].
+
+### Experiencia
+
+- **[REEMPLAZAR Puesto actual]** — [Institución], [desde]–presente.
+- **Investigador/a posdoctoral** — [Institución], [años].
+
+### Premios y becas
+
+- [REEMPLAZAR] Premio / beca, [año].
+
+### Idiomas
+
+- Español (nativo), Inglés ([nivel]), [otros].
