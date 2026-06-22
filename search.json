@@ -1,0 +1,149 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Prof. Omar Enrique Garcia Caicedo",
+    "section": "",
+    "text": "[REEMPLAZAR] Soy profesor/a de matemáticas en la [Universidad/Instituto], en el departamento de [Departamento]. Mi investigación se centra en [tema de investigación], con especial interés en [subtemas concretos].\nAntes de incorporarme a [universidad actual] obtuve mi doctorado en [Universidad] ([año]) bajo la dirección de [director/a], y realicé estancias posdoctorales en [instituciones]."
+  },
+  {
+    "objectID": "index.html#sobre-mí",
+    "href": "index.html#sobre-mí",
+    "title": "Prof. Omar Enrique Garcia Caicedo",
+    "section": "",
+    "text": "[REEMPLAZAR] Soy profesor/a de matemáticas en la [Universidad/Instituto], en el departamento de [Departamento]. Mi investigación se centra en [tema de investigación], con especial interés en [subtemas concretos].\nAntes de incorporarme a [universidad actual] obtuve mi doctorado en [Universidad] ([año]) bajo la dirección de [director/a], y realicé estancias posdoctorales en [instituciones]."
+  },
+  {
+    "objectID": "index.html#líneas-de-investigación",
+    "href": "index.html#líneas-de-investigación",
+    "title": "Prof. Omar Enrique Garcia Caicedo",
+    "section": "Líneas de investigación",
+    "text": "Líneas de investigación\n\n[REEMPLAZAR] Línea 1 — p. ej. Operadores en espacios de Hilbert.\n[REEMPLAZAR] Línea 2 — p. ej. Teoría espectral.\n[REEMPLAZAR] Línea 3 — p. ej. Ecuaciones en derivadas parciales."
+  },
+  {
+    "objectID": "index.html#docencia-curso-actual",
+    "href": "index.html#docencia-curso-actual",
+    "title": "Prof. Omar Enrique Garcia Caicedo",
+    "section": "Docencia (curso actual)",
+    "text": "Docencia (curso actual)\n\n[REEMPLAZAR] [Asignatura] — [grado/máster], [semestre].\n[REEMPLAZAR] [Asignatura] — [grado/máster], [semestre].\n\n\n\n\n\n\n\nNota\n\n\n\nEsta es la página de inicio. Para ver mis trabajos, visita Publicaciones; para notas y divulgación, el Blog; y mi currículum completo está en CV."
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Currículum Vitae",
+    "section": "",
+    "text": "Puedes descargar mi CV completo en PDF aquí:\nPara actualizarlo, simplemente reemplaza el archivo files/cv.pdf por tu versión nueva (mismo nombre) y vuelve a generar el sitio. El enlace seguirá funcionando sin cambiar nada más."
+  },
+  {
+    "objectID": "cv.html#resumen",
+    "href": "cv.html#resumen",
+    "title": "Currículum Vitae",
+    "section": "Resumen",
+    "text": "Resumen\nA continuación, una versión breve en la propia web (opcional). Puedes mantenerla o borrar esta sección y dejar solo el PDF.\n\nFormación\n\nDoctorado en Matemáticas — [REEMPLAZAR Universidad], [año].\nMáster / Licenciatura en Matemáticas — [REEMPLAZAR Universidad], [año].\n\n\n\nExperiencia\n\n[REEMPLAZAR Puesto actual] — [Institución], [desde]–presente.\nInvestigador/a posdoctoral — [Institución], [años].\n\n\n\nPremios y becas\n\n[REEMPLAZAR] Premio / beca, [año].\n\n\n\nIdiomas\n\nEspañol (nativo), Inglés ([nivel]), [otros]."
+  },
+  {
+    "objectID": "posts/teorema/index.html",
+    "href": "posts/teorema/index.html",
+    "title": "Demostración de un teorema: la irracionalidad de \\(\\sqrt{2}\\)",
+    "section": "",
+    "text": "Esta entrada es una muestra de lo que se puede escribir con todo el aparato matemático: entornos de teorema y demostración, ecuaciones numeradas con referencias cruzadas, matrices, sumatorios, integrales, productos tensoriales y toda la notación habitual (conjuntos, lógica, \\(\\mathcal{caligráficas}\\), \\(\\mathbb{pizarra}\\) y \\(\\mathfrak{fraktur}\\))."
+  },
+  {
+    "objectID": "posts/teorema/index.html#notación",
+    "href": "posts/teorema/index.html#notación",
+    "title": "Demostración de un teorema: la irracionalidad de \\(\\sqrt{2}\\)",
+    "section": "Notación",
+    "text": "Notación\nRecordemos la notación básica. Trabajamos con los conjuntos de números naturales \\(\\NN\\), enteros \\(\\ZZ\\), racionales \\(\\QQ\\), reales \\(\\RR\\) y complejos \\(\\CC\\) (estos cinco son macros propias definidas en _quarto.yml: escribir \\RR produce \\(\\RR\\)).\nUsamos cuantificadores y conectivas lógicas sin reparo: \\[\n\\forall \\varepsilon &gt; 0 \\;\\; \\exists\\, \\delta &gt; 0 : \\;\n\\abs{x - a} &lt; \\delta \\implies \\abs{f(x) - f(a)} &lt; \\varepsilon .\n\\]\nLas familias de conjuntos van en letra caligráfica, \\(\\mathcal{F} \\subseteq\n\\mathcal{P}(X)\\); un álgebra de operadores en fraktur, \\(\\mathfrak{A}\\), con su centro \\(\\mathfrak{Z}(\\mathfrak{A})\\); y las operaciones de conjuntos son las de siempre: \\[\nA \\cup B,\\quad A \\cap B,\\quad A \\setminus B,\\quad A \\subseteq B,\\quad\nA \\in \\mathcal{F},\\quad \\bigcup_{n \\in \\NN} A_n .\n\\]"
+  },
+  {
+    "objectID": "posts/teorema/index.html#el-teorema-y-su-demostración",
+    "href": "posts/teorema/index.html#el-teorema-y-su-demostración",
+    "title": "Demostración de un teorema: la irracionalidad de \\(\\sqrt{2}\\)",
+    "section": "El teorema y su demostración",
+    "text": "El teorema y su demostración\nPasemos al resultado clásico. Lo enunciamos como teorema usando los entornos nativos de Quarto (que se numeran y se pueden referenciar solos), y damos primero un lema auxiliar.\n\nLema 1 (Un cuadrado par tiene base par) Sea \\(p \\in \\ZZ\\). Si \\(p^{2}\\) es par, entonces \\(p\\) es par.\n\n\nDemostración. Razonamos por contrarrecíproco. Si \\(p\\) es impar, entonces \\(p = 2k+1\\) para algún \\(k \\in \\ZZ\\), y por tanto \\[\np^{2} = (2k+1)^{2} = 4k^{2} + 4k + 1 = 2\\,(2k^{2} + 2k) + 1 ,\n\\] que es impar. Luego, si \\(p^{2}\\) es par, \\(p\\) no puede ser impar; es decir, \\(p\\) es par. \\(\\blacksquare\\)\n\nCon el Lema 1 a mano, demostramos el teorema central.\n\nTeorema 1 (Irracionalidad de \\(\\sqrt{2}\\) (Pitágoras / Euclides)) El número \\(\\sqrt{2}\\) es irracional; esto es, \\(\\sqrt{2} \\notin \\QQ\\).\n\n\nDemostración. Supongamos, por reducción al absurdo, que \\(\\sqrt{2} \\in \\QQ\\). Entonces existen enteros \\(p, q\\) con \\(q \\neq 0\\) tales que \\[\n\\sqrt{2} = \\frac{p}{q},\n\\qquad \\text{con } \\gcd(p, q) = 1,\n\\tag{1}\\] donde podemos suponer la fracción irreducible (si no lo fuera, la simplificaríamos). Elevando al cuadrado la igualdad Ecuación 1 y despejando, obtenemos \\[\np^{2} = 2\\,q^{2}.\n\\tag{2}\\]\nLa identidad Ecuación 2 dice que \\(p^{2}\\) es par; por el Lema 1, \\(p\\) también lo es, digamos \\(p = 2k\\) con \\(k \\in \\ZZ\\). Sustituyendo en Ecuación 2, \\[\n(2k)^{2} = 2\\,q^{2}\n\\;\\Longrightarrow\\;\n4k^{2} = 2\\,q^{2}\n\\;\\Longrightarrow\\;\nq^{2} = 2k^{2}.\n\\]\nPero esto dice que \\(q^{2}\\) es par y, de nuevo por el Lema 1, \\(q\\) es par. Hemos concluido que tanto \\(p\\) como \\(q\\) son pares, lo que contradice que \\(\\gcd(p, q) = 1\\) en Ecuación 1. La contradicción provino de suponer \\(\\sqrt{2} \\in \\QQ\\); por tanto \\(\\sqrt{2} \\notin \\QQ\\). \\(\\blacksquare\\)"
+  },
+  {
+    "objectID": "posts/teorema/index.html#ecuaciones-numeradas-y-referencias-cruzadas",
+    "href": "posts/teorema/index.html#ecuaciones-numeradas-y-referencias-cruzadas",
+    "title": "Demostración de un teorema: la irracionalidad de \\(\\sqrt{2}\\)",
+    "section": "Ecuaciones numeradas y referencias cruzadas",
+    "text": "Ecuaciones numeradas y referencias cruzadas\nHay dos formas de numerar y referenciar ecuaciones; ambas funcionan en este sitio. Úsala la que te resulte más natural.\nForma 1 — al estilo Quarto. Se etiqueta la ecuación con {#eq-...} y se cita con @eq-.... La ecuación de Euler, \\[\ne^{i\\pi} + 1 = 0,\n\\tag{3}\\] es la Ecuación 3.\nForma 2 — al estilo LaTeX puro (vía MathJax con tags: 'ams'). Se usa \\label{...} dentro de un entorno equation y se cita con \\eqref{...}: \\[\\begin{equation}\\label{eq:gauss}\n\\sum_{k=1}^{n} k = \\frac{n(n+1)}{2}.\n\\end{equation}\\] La fórmula de Gauss es la ecuación \\(\\eqref{eq:gauss}\\)."
+  },
+  {
+    "objectID": "posts/teorema/index.html#un-catálogo-de-entornos",
+    "href": "posts/teorema/index.html#un-catálogo-de-entornos",
+    "title": "Demostración de un teorema: la irracionalidad de \\(\\sqrt{2}\\)",
+    "section": "Un catálogo de entornos",
+    "text": "Un catálogo de entornos\nPara que se vea que todo el repertorio renderiza bien.\nSumatorios e integrales en una cadena de igualdades con align (cada línea se alinea por el = y se numera automáticamente): \\[\\begin{align}\n\\int_{0}^{\\infty} e^{-x}\\,dx\n  &= \\Big[-e^{-x}\\Big]_{0}^{\\infty} = 1, \\\\\n\\sum_{n=0}^{\\infty} \\frac{1}{n!}\n  &= e, \\\\\n\\sum_{n=1}^{\\infty} \\frac{1}{n^{2}}\n  &= \\frac{\\pi^{2}}{6}.\n\\end{align}\\]\nDefinición por casos con cases: \\[\n\\operatorname{sgn}(x) =\n\\begin{cases}\n\\phantom{-}1 & \\text{si } x &gt; 0, \\\\\n\\phantom{-}0 & \\text{si } x = 0, \\\\\n-1 & \\text{si } x &lt; 0.\n\\end{cases}\n\\]\nMatrices (pmatrix, bmatrix) y su producto: \\[\n\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\n\\begin{pmatrix} x \\\\ y \\end{pmatrix}\n=\n\\begin{bmatrix} ax + by \\\\ cx + dy \\end{bmatrix}.\n\\]\nProducto tensorial y normas (la macro \\norm{·} también es nuestra): \\[\n\\norm{u \\otimes v} = \\norm{u}\\,\\norm{v},\n\\qquad\n(A \\otimes B)(u \\otimes v) = (Au) \\otimes (Bv),\n\\qquad\nu, v \\in \\mathcal{H}.\n\\]\n\n\n\n\n\n\nTipPara Omar\n\n\n\nTodo lo anterior está escrito en texto plano con LaTeX entre $...$ (en línea) o $$...$$ (en bloque). En el README tienes una chuleta con estos mismos ejemplos listos para copiar y pegar."
+  },
+  {
+    "objectID": "posts/bienvenida/index.html",
+    "href": "posts/bienvenida/index.html",
+    "title": "Bienvenida al blog",
+    "section": "",
+    "text": "¡Hola! Esta es la primera entrada del blog. La uso para enseñar lo más básico de cómo se escribe aquí: texto normal, una imagen, una lista y un enlace. Las entradas siguientes ya entran en materia matemática de verdad."
+  },
+  {
+    "objectID": "posts/bienvenida/index.html#qué-encontrarás-en-este-blog",
+    "href": "posts/bienvenida/index.html#qué-encontrarás-en-este-blog",
+    "title": "Bienvenida al blog",
+    "section": "¿Qué encontrarás en este blog?",
+    "text": "¿Qué encontrarás en este blog?\nPienso usar este espacio para varias cosas:\n\nNotas de clase y aclaraciones para mis estudiantes.\nDivulgación: explicar ideas bonitas de las matemáticas sin tanto formalismo.\nApuntes de investigación: comentar artículos que voy leyendo.\n\nA veces las entradas serán cortas; otras, demostraciones completas. Por ejemplo, en la siguiente entrada demuestro con todo detalle que \\(\\sqrt{2}\\) es irracional."
+  },
+  {
+    "objectID": "posts/bienvenida/index.html#por-qué-quarto",
+    "href": "posts/bienvenida/index.html#por-qué-quarto",
+    "title": "Bienvenida al blog",
+    "section": "¿Por qué Quarto?",
+    "text": "¿Por qué Quarto?\nEscribir matemáticas en una web suele ser incómodo. Con esta herramienta puedo escribir como si tomara apuntes —en texto plano con un poco de LaTeX— y el resultado se ve limpio y profesional. Si te interesa el detalle técnico, todo el código fuente del sitio está pensado para editarse sin ser informático.\n\n“Las matemáticas son el alfabeto con el cual Dios ha escrito el universo.” — atribuido a Galileo Galilei.\n\n¡Nos leemos en la próxima entrada!"
+  },
+  {
+    "objectID": "posts/citas/index.html",
+    "href": "posts/citas/index.html",
+    "title": "Citas, referencias y un poco de código",
+    "section": "",
+    "text": "En esta entrada muestro cómo citar trabajos desde el archivo referencias.bib. Citar es tan sencillo como escribir @clave, donde clave es el identificador de la entrada en el .bib. Al final de la página aparece sola la lista de referencias con solo lo que se haya citado."
+  },
+  {
+    "objectID": "posts/citas/index.html#citando-en-el-texto",
+    "href": "posts/citas/index.html#citando-en-el-texto",
+    "title": "Citas, referencias y un poco de código",
+    "section": "Citando en el texto",
+    "text": "Citando en el texto\nPara los fundamentos del análisis real sigo el clásico de Rudin (1976), mientras que en álgebra conmutativa la referencia obligada es Atiyah y Macdonald (1969). Las citas también pueden ir entre paréntesis: el teorema de progresiones aritméticas en los primos es un hito reciente (Green y Tao 2008), y la demostración del último teorema de Fermat por Wiles (Wiles 1995) cerró un problema abierto durante más de tres siglos.\nSe pueden citar varios trabajos a la vez (Rudin 1976; Atiyah y Macdonald 1969) e incluso añadir páginas o notas: (Wiles 1995, 443-51).\n\n\n\n\n\n\nNota\n\n\n\nComo la bibliografía está configurada de forma global en _quarto.yml, no hay que hacer nada especial en cada post: basta con citar con @clave y la lista de referencias se genera automáticamente al final."
+  },
+  {
+    "objectID": "posts/citas/index.html#un-cálculo-simbólico-de-ejemplo",
+    "href": "posts/citas/index.html#un-cálculo-simbólico-de-ejemplo",
+    "title": "Citas, referencias y un poco de código",
+    "section": "Un cálculo simbólico de ejemplo",
+    "text": "Un cálculo simbólico de ejemplo\nA menudo conviene acompañar una idea con un cálculo. Los bloques de código se escriben entre triples acentos graves indicando el lenguaje, y se obtiene resaltado de sintaxis y un botón de copiar. Por ejemplo, este fragmento de SymPy (Python) verifica el valor de la suma de Basilea \\(\\sum_{n\\ge 1} n^{-2} = \\pi^2/6\\) (resuelta por Euler) que vimos en la entrada anterior:\nimport sympy as sp\n\nn = sp.symbols(\"n\", positive=True, integer=True)\n\n# Suma simbólica exacta de la serie de Basilea\nserie = sp.summation(1 / n**2, (n, 1, sp.oo))\nprint(serie)              # -&gt; pi**2/6\n\n# Comprobación numérica de la suma parcial\nparcial = sum(1 / k**2 for k in range(1, 100_000))\nprint(float(parcial), float(sp.pi**2 / 6))\nY lo mismo en SageMath, que entiende directamente la notación matemática:\n# SageMath\nvar('n')\nprint(sum(1/n^2, n, 1, oo))   # pi^2/6\nEl bloque de arriba es solo ilustrativo: aparece resaltado pero no se ejecuta al generar el sitio, así que el sitio compila sin necesidad de tener Python instalado. (Quarto también puede ejecutar el código y mostrar su resultado, pero eso queda para más adelante si a Omar le interesa.)"
+  },
+  {
+    "objectID": "posts/citas/index.html#referencias",
+    "href": "posts/citas/index.html#referencias",
+    "title": "Citas, referencias y un poco de código",
+    "section": "Referencias",
+    "text": "Referencias\n\n\n\n\n\n\nLas referencias de abajo se generan automáticamente a partir de las citas de esta página. El estilo de las citas se fija en _quarto.yml.\n\n\n\n\n\nAtiyah, Michael F., y Ian G. Macdonald. 1969. Introduction to Commutative Algebra. Addison-Wesley.\n\n\nGreen, Ben, y Terence Tao. 2008. «The Primes Contain Arbitrarily Long Arithmetic Progressions». Annals of Mathematics 167 (2): 481-547. https://doi.org/10.4007/annals.2008.167.481.\n\n\nRudin, Walter. 1976. Principles of Mathematical Analysis. 3.ª ed. International Series en Pure y Applied Mathematics. McGraw-Hill.\n\n\nWiles, Andrew. 1995. «Modular Elliptic Curves and Fermat’s Last Theorem». Annals of Mathematics 141 (3): 443-551. https://doi.org/10.2307/2118559."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "prueba omaristica\n\n\n\nálgebra\n\nteoría de números\n\nherramientas\n\n\n\nCómo citar artículos y libros desde el .bib, con la bibliografía al final, y cómo incluir código resaltado.\n\n\n\n\n\n5 mar 2026\n\n\nProf. Omar\n\n1 minutos\n\n\n\n\n\n\nCitas, referencias y un poco de código\n\n\n\nálgebra\n\nteoría de números\n\nherramientas\n\n\n\nCómo citar artículos y libros desde el .bib, con la bibliografía al final, y cómo incluir código resaltado.\n\n\n\n\n\n5 mar 2026\n\n\nProf. [REEMPLAZAR Nombre]\n\n2 minutos\n\n\n\n\n\n\nDemostración de un teorema: la irracionalidad de \\(\\sqrt{2}\\)\n\n\n\nanálisis\n\nteoría de números\n\ndemostraciones\n\n\n\nUn recorrido por teoremas, lemas, ecuaciones numeradas y todo el aparato LaTeX que usa un matemático.\n\n\n\n\n\n10 feb 2026\n\n\nProf. [REEMPLAZAR Nombre]\n\n4 minutos\n\n\n\n\n\n\nBienvenida al blog\n\n\n\ngeneral\n\ndivulgación\n\n\n\nPrimera entrada: para qué sirve este espacio y cómo está hecho.\n\n\n\n\n\n15 ene 2026\n\n\nProf. [REEMPLAZAR Nombre]\n\n1 minutos\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "publicaciones.html",
+    "href": "publicaciones.html",
+    "title": "Publicaciones",
+    "section": "",
+    "text": "A continuación, mis publicaciones y libros de referencia. Esta lista se genera sola desde el archivo referencias.bib: para añadir una publicación nueva no hay que tocar esta página, basta con agregar su entrada al .bib (ver el README). Los identificadores DOI aparecen como enlaces automáticamente."
+  },
+  {
+    "objectID": "publicaciones.html#publicaciones",
+    "href": "publicaciones.html#publicaciones",
+    "title": "Publicaciones",
+    "section": "Lista de publicaciones",
+    "text": "Lista de publicaciones\n\n\nAtiyah, Michael F., y Ian G. Macdonald. 1969. Introduction to Commutative Algebra. Addison-Wesley.\n\n\nGreen, Ben, y Terence Tao. 2008. «The Primes Contain Arbitrarily Long Arithmetic Progressions». Annals of Mathematics 167 (2): 481-547. https://doi.org/10.4007/annals.2008.167.481.\n\n\nRudin, Walter. 1976. Principles of Mathematical Analysis. 3.ª ed. International Series en Pure y Applied Mathematics. McGraw-Hill.\n\n\nWiles, Andrew. 1995. «Modular Elliptic Curves and Fermat’s Last Theorem». Annals of Mathematics 141 (3): 443-551. https://doi.org/10.2307/2118559."
+  }
+]

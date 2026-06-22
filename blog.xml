@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Prof. [REEMPLAZAR Nombre]</title>
+<link>https://ejemplo.com/blog.html</link>
+<atom:link href="https://ejemplo.com/blog.xml" rel="self" type="application/rss+xml"/>
+<description>Sitio web académico — matemáticas</description>
+<generator>quarto-1.9.38</generator>
+<lastBuildDate>Thu, 05 Mar 2026 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>prueba omaristica</title>
+  <dc:creator>Prof. Omar</dc:creator>
+  <link>https://ejemplo.com/posts/prueba/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="todos-son-unos-malparidos-los-odio-a-todos" class="level2">
+
+
+
+</section>
+
+ ]]></description>
+  <category>álgebra</category>
+  <category>teoría de números</category>
+  <category>herramientas</category>
+  <guid>https://ejemplo.com/posts/prueba/</guid>
+  <pubDate>Thu, 05 Mar 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Citas, referencias y un poco de código</title>
+  <dc:creator>Prof. [REEMPLAZAR Nombre]</dc:creator>
+  <link>https://ejemplo.com/posts/citas/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>En esta entrada muestro cómo <strong>citar</strong> trabajos desde el archivo <code>referencias.bib</code>. Citar es tan sencillo como escribir <code>@clave</code>, donde <code>clave</code> es el identificador de la entrada en el <code>.bib</code>. Al final de la página aparece sola la lista de <strong>referencias</strong> con solo lo que se haya citado.</p>
+<section id="citando-en-el-texto" class="level2">
+<h2 class="anchored" data-anchor-id="citando-en-el-texto">Citando en el texto</h2>
+<p>Para los fundamentos del análisis real sigo el clásico de <span class="citation" data-cites="rudin1976">Rudin (1976)</span>, mientras que en álgebra conmutativa la referencia obligada es <span class="citation" data-cites="atiyah1969">Atiyah y Macdonald (1969)</span>. Las citas también pueden ir entre paréntesis: el teorema de progresiones aritméticas en los primos es un hito reciente <span class="citation" data-cites="greentao2008">(Green y Tao 2008)</span>, y la demostración del último teorema de Fermat por Wiles <span class="citation" data-cites="wiles1995">(Wiles 1995)</span> cerró un problema abierto durante más de tres siglos.</p>
+<p>Se pueden citar varios trabajos a la vez <span class="citation" data-cites="rudin1976 atiyah1969">(Rudin 1976; Atiyah y Macdonald 1969)</span> e incluso añadir páginas o notas: <span class="citation" data-cites="wiles1995">(Wiles 1995, 443-51)</span>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Como la bibliografía está configurada de forma global en <code>_quarto.yml</code>, <strong>no hay que hacer nada especial</strong> en cada post: basta con citar con <code>@clave</code> y la lista de referencias se genera automáticamente al final.</p>
+</div>
+</div>
+</section>
+<section id="un-cálculo-simbólico-de-ejemplo" class="level2">
+<h2 class="anchored" data-anchor-id="un-cálculo-simbólico-de-ejemplo">Un cálculo simbólico de ejemplo</h2>
+<p>A menudo conviene acompañar una idea con un cálculo. Los bloques de código se escriben entre triples acentos graves indicando el lenguaje, y se obtiene <strong>resaltado de sintaxis</strong> y un botón de copiar. Por ejemplo, este fragmento de <a href="https://www.sympy.org">SymPy</a> (Python) verifica el valor de la suma de Basilea <img src="https://latex.codecogs.com/png.latex?%5Csum_%7Bn%5Cge%201%7D%20n%5E%7B-2%7D%20=%20%5Cpi%5E2/6"> (resuelta por Euler) que vimos en la entrada anterior:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> sympy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> sp</span>
+<span id="cb1-2"></span>
+<span id="cb1-3">n <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> sp.symbols(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"n"</span>, positive<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>, integer<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>)</span>
+<span id="cb1-4"></span>
+<span id="cb1-5"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Suma simbólica exacta de la serie de Basilea</span></span>
+<span id="cb1-6">serie <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> sp.summation(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> n<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, (n, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, sp.oo))</span>
+<span id="cb1-7"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(serie)              <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># -&gt; pi**2/6</span></span>
+<span id="cb1-8"></span>
+<span id="cb1-9"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Comprobación numérica de la suma parcial</span></span>
+<span id="cb1-10">parcial <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">sum</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> k<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> k <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100_000</span>))</span>
+<span id="cb1-11"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">float</span>(parcial), <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">float</span>(sp.pi<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>))</span></code></pre></div></div>
+<p>Y lo mismo en <strong>SageMath</strong>, que entiende directamente la notación matemática:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># SageMath</span></span>
+<span id="cb2-2">var(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'n'</span>)</span>
+<span id="cb2-3"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">sum</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>n<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, n, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, oo))   <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># pi^2/6</span></span></code></pre></div></div>
+<p>El bloque de arriba es solo <strong>ilustrativo</strong>: aparece resaltado pero no se ejecuta al generar el sitio, así que el sitio compila sin necesidad de tener Python instalado. (Quarto también puede <em>ejecutar</em> el código y mostrar su resultado, pero eso queda para más adelante si a Omar le interesa.)</p>
+</section>
+<section id="referencias" class="level2">
+<h2 class="anchored" data-anchor-id="referencias">Referencias</h2>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Las referencias de abajo se generan automáticamente a partir de las citas de esta página. El estilo de las citas se fija en <code>_quarto.yml</code>.</p>
+</div>
+</div>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-atiyah1969" class="csl-entry">
+Atiyah, Michael F., y Ian G. Macdonald. 1969. <em>Introduction to Commutative Algebra</em>. Addison-Wesley.
+</div>
+<div id="ref-greentao2008" class="csl-entry">
+Green, Ben, y Terence Tao. 2008. <span>«The Primes Contain Arbitrarily Long Arithmetic Progressions»</span>. <em>Annals of Mathematics</em> 167 (2): 481-547. <a href="https://doi.org/10.4007/annals.2008.167.481">https://doi.org/10.4007/annals.2008.167.481</a>.
+</div>
+<div id="ref-rudin1976" class="csl-entry">
+Rudin, Walter. 1976. <em>Principles of Mathematical Analysis</em>. 3.ª ed. International Series en Pure y Applied Mathematics. McGraw-Hill.
+</div>
+<div id="ref-wiles1995" class="csl-entry">
+Wiles, Andrew. 1995. <span>«Modular Elliptic Curves and Fermat’s Last Theorem»</span>. <em>Annals of Mathematics</em> 141 (3): 443-551. <a href="https://doi.org/10.2307/2118559">https://doi.org/10.2307/2118559</a>.
+</div>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>álgebra</category>
+  <category>teoría de números</category>
+  <category>herramientas</category>
+  <guid>https://ejemplo.com/posts/citas/</guid>
+  <pubDate>Thu, 05 Mar 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Demostración de un teorema: la irracionalidad de \(\sqrt{2}\)</title>
+  <dc:creator>Prof. [REEMPLAZAR Nombre]</dc:creator>
+  <link>https://ejemplo.com/posts/teorema/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Esta entrada es una <strong>muestra de lo que se puede escribir</strong> con todo el aparato matemático: entornos de teorema y demostración, ecuaciones numeradas con referencias cruzadas, matrices, sumatorios, integrales, productos tensoriales y toda la notación habitual (conjuntos, lógica, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7Bcaligr%C3%A1ficas%7D">, <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7Bpizarra%7D"> y <img src="https://latex.codecogs.com/png.latex?%5Cmathfrak%7Bfraktur%7D">).</p>
+<section id="notación" class="level2">
+<h2 class="anchored" data-anchor-id="notación">Notación</h2>
+<p>Recordemos la notación básica. Trabajamos con los conjuntos de números naturales <img src="https://latex.codecogs.com/png.latex?%5CNN">, enteros <img src="https://latex.codecogs.com/png.latex?%5CZZ">, racionales <img src="https://latex.codecogs.com/png.latex?%5CQQ">, reales <img src="https://latex.codecogs.com/png.latex?%5CRR"> y complejos <img src="https://latex.codecogs.com/png.latex?%5CCC"> (estos cinco son <strong>macros propias</strong> definidas en <code>_quarto.yml</code>: escribir <code>\RR</code> produce <img src="https://latex.codecogs.com/png.latex?%5CRR">).</p>
+<p>Usamos cuantificadores y conectivas lógicas sin reparo: <img src="https://latex.codecogs.com/png.latex?%0A%5Cforall%20%5Cvarepsilon%20%3E%200%20%5C;%5C;%20%5Cexists%5C,%20%5Cdelta%20%3E%200%20:%20%5C;%0A%5Cabs%7Bx%20-%20a%7D%20%3C%20%5Cdelta%20%5Cimplies%20%5Cabs%7Bf(x)%20-%20f(a)%7D%20%3C%20%5Cvarepsilon%20.%0A"></p>
+<p>Las familias de conjuntos van en letra caligráfica, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BF%7D%20%5Csubseteq%0A%5Cmathcal%7BP%7D(X)">; un álgebra de operadores en fraktur, <img src="https://latex.codecogs.com/png.latex?%5Cmathfrak%7BA%7D">, con su centro <img src="https://latex.codecogs.com/png.latex?%5Cmathfrak%7BZ%7D(%5Cmathfrak%7BA%7D)">; y las operaciones de conjuntos son las de siempre: <img src="https://latex.codecogs.com/png.latex?%0AA%20%5Ccup%20B,%5Cquad%20A%20%5Ccap%20B,%5Cquad%20A%20%5Csetminus%20B,%5Cquad%20A%20%5Csubseteq%20B,%5Cquad%0AA%20%5Cin%20%5Cmathcal%7BF%7D,%5Cquad%20%5Cbigcup_%7Bn%20%5Cin%20%5CNN%7D%20A_n%20.%0A"></p>
+</section>
+<section id="el-teorema-y-su-demostración" class="level2">
+<h2 class="anchored" data-anchor-id="el-teorema-y-su-demostración">El teorema y su demostración</h2>
+<p>Pasemos al resultado clásico. Lo enunciamos como teorema usando los <strong>entornos nativos de Quarto</strong> (que se numeran y se pueden referenciar solos), y damos primero un lema auxiliar.</p>
+<div id="lem-par" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 1 (Un cuadrado par tiene base par)</strong></span> Sea <img src="https://latex.codecogs.com/png.latex?p%20%5Cin%20%5CZZ">. Si <img src="https://latex.codecogs.com/png.latex?p%5E%7B2%7D"> es par, entonces <img src="https://latex.codecogs.com/png.latex?p"> es par.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Demostración</em>. </span>Razonamos por contrarrecíproco. Si <img src="https://latex.codecogs.com/png.latex?p"> es impar, entonces <img src="https://latex.codecogs.com/png.latex?p%20=%202k+1"> para algún <img src="https://latex.codecogs.com/png.latex?k%20%5Cin%20%5CZZ">, y por tanto <img src="https://latex.codecogs.com/png.latex?%0Ap%5E%7B2%7D%20=%20(2k+1)%5E%7B2%7D%20=%204k%5E%7B2%7D%20+%204k%20+%201%20=%202%5C,(2k%5E%7B2%7D%20+%202k)%20+%201%20,%0A"> que es impar. Luego, si <img src="https://latex.codecogs.com/png.latex?p%5E%7B2%7D"> es par, <img src="https://latex.codecogs.com/png.latex?p"> no puede ser impar; es decir, <img src="https://latex.codecogs.com/png.latex?p"> es par. <img src="https://latex.codecogs.com/png.latex?%5Cblacksquare"></p>
+</div>
+<p>Con el Lema&nbsp;1 a mano, demostramos el teorema central.</p>
+<div id="thm-sqrt2" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 1 (Irracionalidad de <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B2%7D"> (Pitágoras / Euclides))</strong></span> El número <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B2%7D"> es irracional; esto es, <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B2%7D%20%5Cnotin%20%5CQQ">.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Demostración</em>. </span>Supongamos, <strong>por reducción al absurdo</strong>, que <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B2%7D%20%5Cin%20%5CQQ">. Entonces existen enteros <img src="https://latex.codecogs.com/png.latex?p,%20q"> con <img src="https://latex.codecogs.com/png.latex?q%20%5Cneq%200"> tales que <span id="eq-fraccion"><img src="https://latex.codecogs.com/png.latex?%0A%5Csqrt%7B2%7D%20=%20%5Cfrac%7Bp%7D%7Bq%7D,%0A%5Cqquad%20%5Ctext%7Bcon%20%7D%20%5Cgcd(p,%20q)%20=%201,%0A%5Ctag%7B1%7D"></span> donde podemos suponer la fracción <strong>irreducible</strong> (si no lo fuera, la simplificaríamos). Elevando al cuadrado la igualdad Ecuación&nbsp;1 y despejando, obtenemos <span id="eq-cuadrado"><img src="https://latex.codecogs.com/png.latex?%0Ap%5E%7B2%7D%20=%202%5C,q%5E%7B2%7D.%0A%5Ctag%7B2%7D"></span></p>
+<p>La identidad Ecuación&nbsp;2 dice que <img src="https://latex.codecogs.com/png.latex?p%5E%7B2%7D"> es par; por el Lema&nbsp;1, <img src="https://latex.codecogs.com/png.latex?p"> también lo es, digamos <img src="https://latex.codecogs.com/png.latex?p%20=%202k"> con <img src="https://latex.codecogs.com/png.latex?k%20%5Cin%20%5CZZ">. Sustituyendo en Ecuación&nbsp;2, <img src="https://latex.codecogs.com/png.latex?%0A(2k)%5E%7B2%7D%20=%202%5C,q%5E%7B2%7D%0A%5C;%5CLongrightarrow%5C;%0A4k%5E%7B2%7D%20=%202%5C,q%5E%7B2%7D%0A%5C;%5CLongrightarrow%5C;%0Aq%5E%7B2%7D%20=%202k%5E%7B2%7D.%0A"></p>
+<p>Pero esto dice que <img src="https://latex.codecogs.com/png.latex?q%5E%7B2%7D"> es par y, de nuevo por el Lema&nbsp;1, <img src="https://latex.codecogs.com/png.latex?q"> es par. Hemos concluido que <strong>tanto <img src="https://latex.codecogs.com/png.latex?p"> como <img src="https://latex.codecogs.com/png.latex?q"> son pares</strong>, lo que contradice que <img src="https://latex.codecogs.com/png.latex?%5Cgcd(p,%20q)%20=%201"> en Ecuación&nbsp;1. La contradicción provino de suponer <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B2%7D%20%5Cin%20%5CQQ">; por tanto <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B2%7D%20%5Cnotin%20%5CQQ">. <img src="https://latex.codecogs.com/png.latex?%5Cblacksquare"></p>
+</div>
+</section>
+<section id="ecuaciones-numeradas-y-referencias-cruzadas" class="level2">
+<h2 class="anchored" data-anchor-id="ecuaciones-numeradas-y-referencias-cruzadas">Ecuaciones numeradas y referencias cruzadas</h2>
+<p>Hay <strong>dos formas</strong> de numerar y referenciar ecuaciones; ambas funcionan en este sitio. Úsala la que te resulte más natural.</p>
+<p><strong>Forma 1 — al estilo Quarto.</strong> Se etiqueta la ecuación con <code>{#eq-...}</code> y se cita con <code>@eq-...</code>. La ecuación de Euler, <span id="eq-euler"><img src="https://latex.codecogs.com/png.latex?%0Ae%5E%7Bi%5Cpi%7D%20+%201%20=%200,%0A%5Ctag%7B3%7D"></span> es la Ecuación&nbsp;3.</p>
+<p><strong>Forma 2 — al estilo LaTeX puro</strong> (vía MathJax con <code>tags: 'ams'</code>). Se usa <code>\label{...}</code> dentro de un entorno <code>equation</code> y se cita con <code>\eqref{...}</code>: <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation%7D%5Clabel%7Beq:gauss%7D%0A%5Csum_%7Bk=1%7D%5E%7Bn%7D%20k%20=%20%5Cfrac%7Bn(n+1)%7D%7B2%7D.%0A%5Cend%7Bequation%7D"> La fórmula de Gauss es la ecuación <img src="https://latex.codecogs.com/png.latex?%5Ceqref%7Beq:gauss%7D">.</p>
+</section>
+<section id="un-catálogo-de-entornos" class="level2">
+<h2 class="anchored" data-anchor-id="un-catálogo-de-entornos">Un catálogo de entornos</h2>
+<p>Para que se vea que todo el repertorio renderiza bien.</p>
+<p><strong>Sumatorios e integrales</strong> en una cadena de igualdades con <code>align</code> (cada línea se alinea por el <code>=</code> y se numera automáticamente): <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Balign%7D%0A%5Cint_%7B0%7D%5E%7B%5Cinfty%7D%20e%5E%7B-x%7D%5C,dx%0A%20%20&amp;=%20%5CBig%5B-e%5E%7B-x%7D%5CBig%5D_%7B0%7D%5E%7B%5Cinfty%7D%20=%201,%20%5C%5C%0A%5Csum_%7Bn=0%7D%5E%7B%5Cinfty%7D%20%5Cfrac%7B1%7D%7Bn!%7D%0A%20%20&amp;=%20e,%20%5C%5C%0A%5Csum_%7Bn=1%7D%5E%7B%5Cinfty%7D%20%5Cfrac%7B1%7D%7Bn%5E%7B2%7D%7D%0A%20%20&amp;=%20%5Cfrac%7B%5Cpi%5E%7B2%7D%7D%7B6%7D.%0A%5Cend%7Balign%7D"></p>
+<p><strong>Definición por casos</strong> con <code>cases</code>: <img src="https://latex.codecogs.com/png.latex?%0A%5Coperatorname%7Bsgn%7D(x)%20=%0A%5Cbegin%7Bcases%7D%0A%5Cphantom%7B-%7D1%20&amp;%20%5Ctext%7Bsi%20%7D%20x%20%3E%200,%20%5C%5C%0A%5Cphantom%7B-%7D0%20&amp;%20%5Ctext%7Bsi%20%7D%20x%20=%200,%20%5C%5C%0A-1%20&amp;%20%5Ctext%7Bsi%20%7D%20x%20%3C%200.%0A%5Cend%7Bcases%7D%0A"></p>
+<p><strong>Matrices</strong> (<code>pmatrix</code>, <code>bmatrix</code>) y su producto: <img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bpmatrix%7D%20a%20&amp;%20b%20%5C%5C%20c%20&amp;%20d%20%5Cend%7Bpmatrix%7D%0A%5Cbegin%7Bpmatrix%7D%20x%20%5C%5C%20y%20%5Cend%7Bpmatrix%7D%0A=%0A%5Cbegin%7Bbmatrix%7D%20ax%20+%20by%20%5C%5C%20cx%20+%20dy%20%5Cend%7Bbmatrix%7D.%0A"></p>
+<p><strong>Producto tensorial</strong> y normas (la macro <code>\norm{·}</code> también es nuestra): <img src="https://latex.codecogs.com/png.latex?%0A%5Cnorm%7Bu%20%5Cotimes%20v%7D%20=%20%5Cnorm%7Bu%7D%5C,%5Cnorm%7Bv%7D,%0A%5Cqquad%0A(A%20%5Cotimes%20B)(u%20%5Cotimes%20v)%20=%20(Au)%20%5Cotimes%20(Bv),%0A%5Cqquad%0Au,%20v%20%5Cin%20%5Cmathcal%7BH%7D.%0A"></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Para Omar
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Todo lo anterior está escrito en texto plano con LaTeX entre <code>$...$</code> (en línea) o <code>$$...$$</code> (en bloque). En el README tienes una chuleta con estos mismos ejemplos listos para copiar y pegar.</p>
+</div>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>análisis</category>
+  <category>teoría de números</category>
+  <category>demostraciones</category>
+  <guid>https://ejemplo.com/posts/teorema/</guid>
+  <pubDate>Tue, 10 Feb 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Bienvenida al blog</title>
+  <dc:creator>Prof. [REEMPLAZAR Nombre]</dc:creator>
+  <link>https://ejemplo.com/posts/bienvenida/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>¡Hola! Esta es la primera entrada del blog. La uso para enseñar lo más básico de cómo se escribe aquí: texto normal, una imagen, una lista y un enlace. Las entradas siguientes ya entran en materia matemática de verdad.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://ejemplo.com/posts/bienvenida/imagen-ejemplo.svg" class="img-fluid figure-img"></p>
+<figcaption>Un banner con algunos símbolos que usaremos a menudo.</figcaption>
+</figure>
+</div>
+<section id="qué-encontrarás-en-este-blog" class="level2">
+<h2 class="anchored" data-anchor-id="qué-encontrarás-en-este-blog">¿Qué encontrarás en este blog?</h2>
+<p>Pienso usar este espacio para varias cosas:</p>
+<ul>
+<li><strong>Notas de clase</strong> y aclaraciones para mis estudiantes.</li>
+<li><strong>Divulgación</strong>: explicar ideas bonitas de las matemáticas sin tanto formalismo.</li>
+<li><strong>Apuntes de investigación</strong>: comentar artículos que voy leyendo.</li>
+</ul>
+<p>A veces las entradas serán cortas; otras, demostraciones completas. Por ejemplo, en la <a href="../../posts/teorema/index.html">siguiente entrada</a> demuestro con todo detalle que <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B2%7D"> es irracional.</p>
+</section>
+<section id="por-qué-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="por-qué-quarto">¿Por qué Quarto?</h2>
+<p>Escribir matemáticas en una web suele ser incómodo. Con esta herramienta puedo escribir como si tomara apuntes —en texto plano con un poco de LaTeX— y el resultado se ve limpio y profesional. Si te interesa el detalle técnico, todo el código fuente del sitio está pensado para editarse sin ser informático.</p>
+<blockquote class="blockquote">
+<p>“Las matemáticas son el alfabeto con el cual Dios ha escrito el universo.” — atribuido a Galileo Galilei.</p>
+</blockquote>
+<p>¡Nos leemos en la próxima entrada!</p>
+
+
+</section>
+
+ ]]></description>
+  <category>general</category>
+  <category>divulgación</category>
+  <guid>https://ejemplo.com/posts/bienvenida/</guid>
+  <pubDate>Thu, 15 Jan 2026 05:00:00 GMT</pubDate>
+  <media:content url="https://ejemplo.com/posts/bienvenida/imagen-ejemplo.svg" medium="image" type="image/svg+xml"/>
+</item>
+</channel>
+</rss>
